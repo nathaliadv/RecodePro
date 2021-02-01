@@ -2,7 +2,9 @@ import { combineReducers } from 'redux';
 import produtos from './produtosReducer';
 import carrinho from './carrinhoReducer';
 
-export default combineReducers({
+const reducers = combineReducers({
     produtos,
     carrinho    
 });
+
+export default reducers;

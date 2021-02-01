@@ -1,11 +1,17 @@
 import { Navbar, Nav, Form, Button } from 'react-bootstrap';
 import { Link, withRouter } from 'react-router-dom';
+import {useSelector} from 'react-redux';
 import '../Estilos/Header.css';
 
 
 function BaseHeader (props){
     const { location } = props;
 
+    //acc: acumulador e cur= valor atual 
+    const totalItens = useSelector(state => 
+        state.carrinho.reduce((acc,cur) =>{
+           return acc + cur.quantidade;
+    }, 0));
 
     return (
         <Navbar variant="dark" expand="lg" fixed="top">
@@ -41,7 +47,8 @@ function BaseHeader (props){
                                 width="40"
                                 className="d-inline-block align-top"
                                 alt="carrinho ícone"
-                            />                        
+                            /> 
+                            {totalItens}                      
                         </Nav.Link>
                     </Nav.Item>
                 </Nav>

@@ -1,4 +1,4 @@
-import produtos from './produtos';
+import produtos from '../../produtos';
 
 const initialState = [...produtos];
 
