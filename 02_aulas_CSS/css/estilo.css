@@ -1,0 +1,147 @@
+
+body, ul, li, p {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+  
+nav {
+    display: flex;
+    width: 100%;
+    background-color:#004AAD;
+}
+
+.menu {    
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.menu li {
+    text-align: center; 
+    width: 25%;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white; 
+}
+
+.opcoes_produtos{
+    display: flex;
+    height: auto;
+    width: 100%; 
+    margin: 0px;
+}
+
+.categorias {
+    width:20%;
+    height: 100%;
+    vertical-align: top;
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+.produtos {
+    width:80%;
+    height: 100%;
+    /*float: right;*/
+    text-align: center;
+    border-left: gray 1px solid;
+}
+
+.area_produto {
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    vertical-align: bottom;
+} 
+
+.descricao {
+    font-size: 14px;
+}
+
+.preco_novo {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#tab_lojas {
+    border: 0px;
+    width: 100%;
+    display: flex;
+}
+
+#tab_lojas div {
+    width:33%;
+    text-align: center;
+}
+
+.opcoes_contatos {
+    width: 100%;
+    display: flex;
+}
+
+.opcoes_contatos div {
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+}
+
+.form_msg {
+    width: 100%;
+    text-align: center;
+}
+
+.form_msg h4 {
+    margin-bottom: 0px;
+}
+
+.form_msg textarea {
+    height: 100px;
+}
+
+.rodape {
+    text-align: center;
+    position: relative;
+    bottom: 0px;
+    background-color:#004AAD;
+    padding: 10px;
+    color: white;
+    font-size: 13px;
+}
+
+.rodape img {
+    width:20%;
+}
+
+.rodape p {
+    font-size: 13px;
+}
+
+.rodape a {
+    text-decoration: none;
+    color: black;
+}
+
+#copyright {
+    font-style: italic;
+}
+
+.pag_inicial {
+    text-align: center;
+}
+
+.pag_inicial img {
+    width:250px;
+    left:50%;
+}

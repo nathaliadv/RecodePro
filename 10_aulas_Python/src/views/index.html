@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de moedas - Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h2 class="display-4 text-center mt-3">Conversor de R$ para outras moedas</h2>
+        <section class="my-5">
+            <h5 class=p-3><em>
+                Aqui é possível realizar a conversão do Real (R$) para as seguintes moedas: <br/>
+                Dólar (USD, USDT, CA, AUD), Euro, Libra, Peso, Iene, Franco, Yuan Chinês, Shekel Israelense, 
+                Bitcoin, Ethereum e Ripple.
+            </em></h5>
+            <hr />
+        
+            <form action="/send" method="POST">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="valorReal">Digite o valor em Reais (R$)</label>
+                        <input class="form-control" type=number min="0.00" placeholder="0.00" input="valorReal" name="valorReal">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="moeda">Selecione moeda</label>
+                        <select class="form-control" id="moeda" name="moeda">
+                            <option value="" selected>Escolher...</option>
+                            <option value= "USD-BRL">Dólar Comercial</option>
+                            <option value="USDT-BRL">Dólar Turismo</option>
+                            <option value="CAD-BRL">Dólar Canadense</option>
+                            <option value="AUD-BRL"> Dólar Australiano</option>
+                            <option value="EUR-BRL">Euro</option>
+                            <option value="GBP-BRL"> Libra Esterlina</option>
+                            <option value="ARS-BRL">Peso Argentino</option>
+                            <option value="JPY-BRL">Iene Japonês</option>
+                            <option value="CHF-BRL">Franco Suíço</option>
+                            <option value="ILS-BRL">Shekel Israelense</option>
+                            <option value="BTC-BRL">Bitcoin</option>
+                            <option value="ETH-BRL">Ethereum</option>
+                            <option value="XRP-BRL">Ripple</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <button type="submit" class="btn btn-success">Enviar</button>
+                    <button type="reset" class="btn btn-warning">Reset</button>
+                </div>
+            </form>
+        </section>
+        <section id="resultado" class="alert alert-dark text-center">
+            <p><strong>Valor correspondente em {{nome}}: {{valorMoeda}}</strong></p>
+            <p style="color:red">{{mensagem}}</p>
+        </section>
+        
+
+        <footer class="footer fixed-bottom text-center small">
+            <p>
+                Nessa aplicação, a conversão é feita utilizando o valor de compra das moedas listadas.
+                A <a href="https://docs.awesomeapi.com.br/api-de-moedas" target="_blank" class="alert-link">API</a> utilizada aqui 
+                retorna a última ocorrência de todas as moedas.
+            </p>
+        </footer>
+
+    </div>
+</body>
+
+</html>

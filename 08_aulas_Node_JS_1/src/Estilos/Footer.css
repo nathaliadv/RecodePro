@@ -1,0 +1,12 @@
+.footer img {
+    width: 60%;
+}
+
+#copyright {
+    font-style: italic;
+}
+
+.footer {
+    font-size: 12px;
+    background-color: #f2f2f2;
+}
