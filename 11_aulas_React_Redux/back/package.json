@@ -1,20 +1,18 @@
 {
-  "name": "node",
+  "name": "backend_nodejs",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "./src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon ./src/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Nathalia Dantas",
   "license": "ISC",
   "dependencies": {
     "commonjs": "0.0.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mysql": "^2.18.1",
-    "node-fetch": "^2.6.1"
+    "mysql": "^2.18.1"
   }
 }
