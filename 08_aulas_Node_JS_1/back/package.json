@@ -1,14 +1,13 @@
 {
-  "name": "node",
+  "name": "backend_nodejs",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "./src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon ./src/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Nathalia Dantas",
   "license": "ISC",
   "dependencies": {
     "commonjs": "0.0.1",
