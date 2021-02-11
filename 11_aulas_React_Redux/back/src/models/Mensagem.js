@@ -14,9 +14,9 @@ class Mensagem {
             `INSERT INTO fale_conosco (nome, email, assunto, mensagem) VALUES ('${this.nome}', '${this.email}', '${this.assunto}', '${this.mensagem}')`, 
             (error, result) => {
                 if (!error) {
-                    return response.json({resultado: "Mensagem enviada com sucesso!"});
+                    return response.status(201).json({resultado: "Mensagem enviada com sucesso!"});
                 } else {
-                    return response.status(201).send("Mensagem enviada com sucesso!");
+                    return response.send(error);
                 }
             }
         )

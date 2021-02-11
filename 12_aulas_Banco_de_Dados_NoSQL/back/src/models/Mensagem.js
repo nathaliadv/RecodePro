@@ -10,8 +10,7 @@ class Mensagem {
     }
 
     registrarMensagem(request, response){
-        connection.query(
-            `INSERT INTO fale_conosco (nome, email, assunto, mensagem) VALUES ('${this.nome}', '${this.email}', '${this.assunto}', '${this.mensagem}')`, 
+        global.connection.collection('fale_conosco').insertOne({'nome':`${this.nome}`, 'email':`${this.email}`, 'assunto':`${this.assunto}`, 'mensagem': `${this.mensagem}`}, 
             (error, result) => {
                 if (!error) {
                     return response.status(201).json({resultado: "Mensagem enviada com sucesso!"});
