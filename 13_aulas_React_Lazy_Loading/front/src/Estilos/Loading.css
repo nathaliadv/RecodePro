@@ -1,0 +1,14 @@
+.carregando {
+text-align: center;
+font-size: 40;
+animation: go-back 0.5s infinite alternate;
+}
+
+@keyframes go-back {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
